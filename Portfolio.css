@@ -1,0 +1,749 @@
+/* =========================
+   GENERAL STYLE
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #faf8ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(76, 42, 120, 0.95);
+
+    box-shadow: 0 3px 15px
+        rgba(76, 42, 120, 0.15);
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1150px;
+
+    margin: auto;
+    padding: 18px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar ul {
+    list-style: none;
+
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+/* underline animation */
+
+.navbar a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: #e8d5ff;
+
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #e8d5ff;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   HOME SECTION
+========================= */
+
+.home {
+    min-height: 92vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 100px;
+
+    padding: 80px 10%;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #e5d1ff,
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #faf7ff,
+            #f1e6ff
+        );
+}
+
+.home-text {
+    max-width: 550px;
+}
+
+.hello {
+    display: inline-block;
+
+    color: #7b4db2;
+    background: #eee1ff;
+
+    padding: 7px 17px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+.home h1 {
+    font-size: 60px;
+    line-height: 1.1;
+
+    color: #4d2878;
+
+    margin-bottom: 10px;
+}
+
+.home h2 {
+    font-size: 25px;
+    color: #9867c5;
+
+    margin-bottom: 20px;
+}
+
+.home-text p {
+    font-size: 16px;
+    color: #555;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7b4db2,
+            #5c338d
+        );
+
+    color: white;
+
+    text-decoration: none;
+
+    border: none;
+    border-radius: 30px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 7px 18px
+        rgba(92, 51, 141, 0.25);
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px
+        rgba(92, 51, 141, 0.35);
+}
+
+
+/* =========================
+   PROFILE PICTURE
+========================= */
+
+.home-image {
+    position: relative;
+}
+
+.home-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c89cff,
+            #7040a8
+        );
+
+    border-radius:
+        45% 55% 60% 40% /
+        45% 40% 60% 55%;
+
+    top: -15px;
+    left: -15px;
+
+    z-index: 0;
+}
+
+.home-image img {
+    position: relative;
+    z-index: 1;
+
+    width: 300px;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius:
+        45% 55% 60% 40% /
+        45% 40% 60% 55%;
+
+    border: 7px solid white;
+
+    box-shadow: 0 15px 35px
+        rgba(82, 45, 126, 0.25);
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+    padding: 90px 10%;
+}
+
+.different-bg {
+    background:
+        linear-gradient(
+            135deg,
+            #f5edff,
+            #ede0ff
+        );
+}
+
+.title {
+    text-align: center;
+
+    color: #4d2878;
+
+    font-size: 36px;
+
+    margin-bottom: 50px;
+
+    position: relative;
+}
+
+.title::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7b4db2,
+            #c49aef
+        );
+
+    margin: 12px auto 0;
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-container {
+    max-width: 1050px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.about-card {
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    border: 1px solid #eadcff;
+
+    box-shadow: 0 10px 30px
+        rgba(76, 42, 120, 0.08);
+
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 35px
+        rgba(76, 42, 120, 0.15);
+}
+
+.about-card h3 {
+    color: #7040a8;
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    color: #555;
+
+    margin-bottom: 10px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education-container {
+    max-width: 1050px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.education-card {
+    background: white;
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    border-bottom: 5px solid #9566c4;
+
+    box-shadow: 0 8px 25px
+        rgba(76, 42, 120, 0.1);
+
+    transition: 0.3s;
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+}
+
+.education-card h3 {
+    color: #633694;
+
+    font-size: 21px;
+
+    margin-bottom: 15px;
+}
+
+.education-card p {
+    color: #555;
+
+    margin-bottom: 8px;
+}
+
+.education-card span {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 5px 13px;
+
+    background: #eee1ff;
+
+    color: #7040a8;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-container {
+    max-width: 1050px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.skill-card {
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #faf5ff
+        );
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    border-radius: 20px;
+
+    border: 1px solid #eadcff;
+
+    box-shadow: 0 8px 25px
+        rgba(76, 42, 120, 0.08);
+
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    border-color: #b88ae8;
+
+    box-shadow: 0 15px 30px
+        rgba(76, 42, 120, 0.15);
+}
+
+.skill-card h3 {
+    color: #633694;
+
+    font-size: 21px;
+
+    margin-bottom: 12px;
+}
+
+.skill-card p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CHARACTER REFERENCE
+========================= */
+
+.reference-card {
+    max-width: 600px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 40px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    border: 1px solid #eadcff;
+
+    box-shadow: 0 12px 30px
+        rgba(76, 42, 120, 0.12);
+}
+
+.reference-card h3 {
+    color: #633694;
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+}
+
+.reference-card p {
+    color: #555;
+
+    margin: 10px 0;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-container {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 50px;
+
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 10px 35px
+        rgba(76, 42, 120, 0.1);
+}
+
+.contact-info h3 {
+    color: #633694;
+
+    font-size: 26px;
+
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: #555;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+
+    padding: 15px 17px;
+
+    border: 1px solid #ddc8f5;
+
+    background: #fcfaff;
+
+    border-radius: 12px;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+form textarea {
+    resize: none;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #8655b8;
+
+    box-shadow: 0 0 0 3px
+        rgba(134, 85, 184, 0.12);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background:
+        linear-gradient(
+            135deg,
+            #4d2878,
+            #6f3da0
+        );
+
+    color: #eee1ff;
+
+    text-align: center;
+
+    padding: 25px;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .home {
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        gap: 50px;
+    }
+
+    .home h1 {
+        font-size: 45px;
+    }
+
+    .home-image img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .home-image::before {
+        width: 265px;
+        height: 265px;
+    }
+
+    .education-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   MOBILE PHONE
+========================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+    .home {
+        padding: 70px 7%;
+    }
+
+    .home h1 {
+        font-size: 37px;
+    }
+
+    .home h2 {
+        font-size: 20px;
+    }
+
+    .section {
+        padding: 70px 7%;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .about-container,
+    .skills-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        padding: 30px 20px;
+    }
+}
